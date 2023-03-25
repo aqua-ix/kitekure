@@ -76,3 +76,10 @@
     }
   });
 }());
+
+// 本番ページではトレイリングスラッシュを付加する
+(function() {
+  if(!location.pathname.includes('/setup') && !location.pathname.includes('/preview') && !location.href.endsWith('/')) {
+    window.location = location.href + '/'
+  }
+}());
