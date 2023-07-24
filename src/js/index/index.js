@@ -79,7 +79,7 @@
 
 // 本番ページではトレイリングスラッシュを付加する
 (function() {
-  if(!location.pathname.includes('/setup') && !location.pathname.includes('/preview') && !location.href.endsWith('/')) {
+  if(!location.pathname.includes('/setup') && !location.pathname.includes('/preview') && !location.href.endsWith('/') && !location.href.endsWith('.html')) {
     window.location = location.href + '/'
   }
 }());
